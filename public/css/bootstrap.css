@@ -2531,7 +2531,6 @@ button.close {
 .nav {
   padding-left: 0;
   margin-bottom: 0;
-  margin-left: 0;
   list-style: none;
 }
 
@@ -3049,6 +3048,10 @@ button.close {
     margin-right: 5px;
     margin-left: -15px;
   }
+  .navbar .container {
+    width: auto;
+    padding: 0;
+  }
   .navbar-nav {
     float: left;
     margin-top: 0;
@@ -3099,6 +3102,13 @@ button.close {
 
 .navbar-inverse .navbar-link:hover {
   color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .nav-collapse .collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
 }
 
 .btn .caret {
@@ -3471,7 +3481,6 @@ button.close {
   display: none;
   overflow: auto;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 .modal.fade {

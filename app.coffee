@@ -16,8 +16,10 @@ app.all '*', (req,res,next) ->
 #app.use(express.logger('dev'));
 app.use express.bodyParser()
 app.use express.methodOverride()
+app.use express.compress()
 app.use app.router
 app.use express.static(path.join(__dirname, 'public'))
+
 
 http.createServer(app).listen app.get('port'), () ->
   console.log "Express server listening on port  + #{app.get('port')}"
