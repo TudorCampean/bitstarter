@@ -13,7 +13,7 @@ app.set('port', process.env.PORT || 3000);
 
 app.all('*', function(req, res, next) {
   if (req.headers['x-forwarded-proto'] !== 'https') {
-    return res.redirect('https://sheltered-wave-3916.herokuapp.com' + req.url);
+    return res.redirect("https://" + req.host + req.url);
   } else {
     return next();
   }
@@ -32,7 +32,3 @@ app.use(express["static"](path.join(__dirname, 'public')));
 http.createServer(app).listen(app.get('port'), function() {
   return console.log("Express server listening on port  + " + (app.get('port')));
 });
-
-/*
-//@ sourceMappingURL=app.map
-*/

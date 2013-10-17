@@ -8,7 +8,7 @@ app.set 'port', process.env.PORT || 3000
 
 app.all '*', (req,res,next) ->
   if(req.headers['x-forwarded-proto']!='https')
-    res.redirect('https://sheltered-wave-3916.herokuapp.com'+req.url)
+    res.redirect("https://#{req.host}#{req.url}")
   else
     next()
 

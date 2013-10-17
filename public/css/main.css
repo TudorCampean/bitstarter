@@ -42,6 +42,10 @@ p.lead {
     height: 40px;
     line-height: 40px;
 }
+div.addthis_toolbox {
+  width:180px;
+  margin: 0 auto;
+ }
 
 /* ==========================================================================
    Print styles.
