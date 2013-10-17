@@ -16,11 +16,11 @@ strategy = new GoogleStrategy
 passport.use strategy
 app.set 'port', process.env.PORT || 3000
 
-app.all '*', (req,res,next) ->
-  if(req.headers['x-forwarded-proto']!='https')
-    res.redirect("https://#{req.host}#{req.url}")
-  else
-    next()
+# app.all '*', (req,res,next) ->
+#   if(req.headers['x-forwarded-proto']!='https')
+#     res.redirect("https://#{req.host}#{req.url}")
+#   else
+#     next()
 
 # Redirect the user to Google for authentication.  When complete, Google
 # will redirect the user back to the application at

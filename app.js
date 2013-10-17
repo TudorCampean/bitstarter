@@ -28,14 +28,6 @@ passport.use(strategy);
 
 app.set('port', process.env.PORT || 3000);
 
-app.all('*', function(req, res, next) {
-  if (req.headers['x-forwarded-proto'] !== 'https') {
-    return res.redirect("https://" + req.host + req.url);
-  } else {
-    return next();
-  }
-});
-
 app.get('/auth/google', passport.authenticate('google'));
 
 app.get('/auth/google/return', passport.authenticate('google', {
