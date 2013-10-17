@@ -2,17 +2,19 @@
   "name": "BitStarter",
   "version": "0.0.1",
   "dependencies": {
-    "express": "3.3.x"
+    "express": "3.3.x",
+    "passport": "~0.1.17",
+    "passport-google": "~0.3.0"
   },
-  "devDependencies":{
-    "grunt":"*",
+  "devDependencies": {
+    "grunt": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-recess":"*",
+    "grunt-recess": "*",
     "grunt-karma": "*",
     "grunt-nodemon": "*",
     "grunt-concurrent": "*",
@@ -24,13 +26,13 @@
     "node": "0.10.x",
     "npm": "1.2.x"
   },
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/TudorCampean/bitstarter"
-    },
-    "author": "TudorCampean",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/IonPop/Sample/issues"
-    }
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/TudorCampean/bitstarter"
+  },
+  "author": "TudorCampean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonPop/Sample/issues"
+  }
 }
